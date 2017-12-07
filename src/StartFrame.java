@@ -26,7 +26,13 @@ public class StartFrame extends JFrame{
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                new QuestionFrame();
+            	String textInput =  textfield.getText();
+            	int teammember = Integer.parseInt(textInput);
+
+            	//constrain:  3<= teammember <=5
+            	if(teammember<=5 && teammember>=3){
+                    new QuestionFrame();            		
+            	}
             }
         });
         
